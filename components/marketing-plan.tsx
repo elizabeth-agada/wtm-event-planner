@@ -196,7 +196,7 @@ export default function MarketingPlan() {
             </Select>
           </div>
 
-          <Select value={newTask.status} onValueChange={(value: any) => setNewTask({ ...newTask, status: value })}>
+          <Select value={newTask.status} onValueChange={(value: MarketingTask["status"]) => setNewTask({ ...newTask, status: value })}>
             <SelectTrigger>
               <SelectValue placeholder="Status" />
             </SelectTrigger>
@@ -256,7 +256,7 @@ export default function MarketingPlan() {
               </div>
 
               <div className="flex items-center gap-2 self-end sm:self-center">
-                <Select value={task.status} onValueChange={(value: any) => updateTaskStatus(task.id, value)}>
+                <Select value={task.status} onValueChange={(value: MarketingTask["status"]) => updateTaskStatus(task.id, value)}>
                   <SelectTrigger className="h-8 w-[130px]">
                     <SelectValue />
                   </SelectTrigger>
@@ -283,7 +283,7 @@ export default function MarketingPlan() {
       <div className="mt-8">
         <h3 className="text-lg font-semibold mb-4">Marketing Timeline</h3>
         <div className="relative border-l-2 border-[#2480F0] pl-6 ml-4 space-y-8">
-          {sortedTasks.map((task, index) => (
+          {sortedTasks.map((task) => (
             <div key={task.id} className="relative">
               <div
                 className={`absolute -left-[30px] rounded-full p-1 ${

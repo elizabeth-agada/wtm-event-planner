@@ -160,7 +160,7 @@ export default function VendorTracker() {
 
           <Select
             value={newVendor.status}
-            onValueChange={(value: any) => setNewVendor({ ...newVendor, status: value })}
+            onValueChange={(value: Vendor["status"]) => setNewVendor({ ...newVendor, status: value })}
           >
             <SelectTrigger>
               <SelectValue placeholder="Status" />
@@ -220,7 +220,7 @@ export default function VendorTracker() {
               </div>
 
               <div className="flex items-center gap-2">
-                <Select value={vendor.status} onValueChange={(value: any) => updateVendorStatus(vendor.id, value)}>
+                <Select value={vendor.status} onValueChange={(value: Vendor["status"]) => updateVendorStatus(vendor.id, value)}>
                   <SelectTrigger className="h-8 w-[120px]">
                     <SelectValue />
                   </SelectTrigger>

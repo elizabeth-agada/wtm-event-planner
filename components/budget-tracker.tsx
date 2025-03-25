@@ -323,7 +323,7 @@ export default function BudgetTracker() {
                 <td className="p-3 border">{item.description}</td>
                 <td className="p-3 border text-right">${item.amount.toFixed(2)}</td>
                 <td className="p-3 border">
-                  <Select value={item.status} onValueChange={(value: any) => updateItemStatus(item.id, value)}>
+                  <Select value={item.status} onValueChange={(value: BudgetItem["status"]) => updateItemStatus(item.id, value)}>
                     <SelectTrigger className="h-8">
                       <SelectValue />
                     </SelectTrigger>

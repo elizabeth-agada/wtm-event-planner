@@ -132,7 +132,7 @@ export default function Timeline() {
       </div>
 
       <div className="relative border-l-2 border-[#2480F0] pl-6 ml-4 space-y-10">
-        {sortedTimeline.map((item, index) => (
+        {sortedTimeline.map((item) => (
           <div key={item.id} className="relative">
             <div className="absolute -left-[30px] bg-[#2480F0] text-white rounded-full p-1">
               <Clock className="h-5 w-5" />
